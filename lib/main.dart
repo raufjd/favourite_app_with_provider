@@ -2,6 +2,7 @@ import 'package:favourite_app_with_provider/provider/favourite_provider.dart';
 import 'package:favourite_app_with_provider/provider/theme_change_provider.dart';
 import 'package:favourite_app_with_provider/screen/dark_theme_screen.dart';
 import 'package:favourite_app_with_provider/screen/favourite/favourite_screen.dart';
+import 'package:favourite_app_with_provider/screen/favourite/value_notify_listner.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -38,7 +39,7 @@ class MyApp extends StatelessWidget {
               backgroundColor: Colors.teal,
             )
           ),
-          home: DarkThemeScreen(),
+          home: NotifyListnerScreen(),
         );
       })
     );

@@ -14,7 +14,6 @@ class MyFavouriteScreen extends StatelessWidget {
       ),
       body: Consumer<FavouriteProvider>(
         builder: (context, value, child) {
-          // Agar koi item favourite nahi hai tu empty message dikhao
           if (value.selectedItem.isEmpty) {
             return const Center(
               child: Text(
@@ -25,10 +24,9 @@ class MyFavouriteScreen extends StatelessWidget {
           }
 
           return ListView.builder(
-            itemCount: value.selectedItem.length, // Sirf selected items ki ginti
+            itemCount: value.selectedItem.length,
             itemBuilder: (context, index) {
-              // Yeh line sab se zaroori hai!
-              // Yeh index se us item ka asal ID/Number nikalti hai
+
               final actualItemValue = value.selectedItem[index];
 
               return ListTile(
@@ -37,10 +35,9 @@ class MyFavouriteScreen extends StatelessWidget {
                 subtitle: Text("Favourite Item App $actualItemValue"),
                 trailing: const Icon(
                   Icons.favorite,
-                  color: Colors.red, // Taki favourite items pyare lagein
+                  color: Colors.red,
                 ),
                 onTap: () {
-                  // Jab click ho tu index nahi, balki asal value remove karein
                   value.removeItem(actualItemValue);
                 },
               );

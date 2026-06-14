@@ -11,7 +11,6 @@ class FavouriteScreen extends StatefulWidget {
 
 class _FavouriteScreenState extends State<FavouriteScreen> {
 
-  List<int> selectedItem = [];
   @override
   Widget build(BuildContext context) {
     // final favouriteProvider = Provider.of<FavouriteProvider>(context);
